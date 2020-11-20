@@ -1,5 +1,9 @@
 @font-face { font-family: "Nevis"; src: url("/common/fonts/nevis2.ttf") }
-#app { background-image: url("~@/assets/spoopy.jpg"); background-size: cover; }
+#app {
+    background-image: url("~@/assets/spoopy.jpg");
+    background-size: cover;
+    overflow-x: hidden;
+}
 .heading-bar { background-image: url("~@/assets/beeheader.png"); background-size: cover; }
 
 // external links
