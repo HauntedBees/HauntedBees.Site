@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app id="app">
     <v-app-bar class="heading-bar" app dark color="accent" :height="80">
       <div class="mx-auto">
         <router-link to="/">
