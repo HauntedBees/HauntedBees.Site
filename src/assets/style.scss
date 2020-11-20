@@ -1,0 +1,33 @@
+@font-face { font-family: "Nevis"; src: url("/common/fonts/nevis2.ttf") }
+#app { background-image: url("~@/assets/spoopy.jpg"); background-size: cover; }
+.heading-bar { background-image: url("~@/assets/beeheader.png"); background-size: cover; }
+
+// external links
+.v-application .text-md-h4.external-link, .v-application .text-sm-h6.external-link {
+    color: #000000!important;
+    font-family: "Nevis"!important;
+    text-transform: none!important;
+}
+
+// main content
+.beebg { background-image: url("~@/assets/beebg.png"); background-size: cover; }
+.beebg .v-list.theme--dark { background: none }
+.main-xs, .main-sm { width: 100% }
+.main-md { width: 95% }
+.main-lg { width: 85% }
+.main-xl { width: 80% }
+p { text-indent: 2em }
+.main-content { min-height: 425px; position: relative; }
+.dem-boiz { position: absolute; bottom: 0 }
+
+// internal links
+.internal-list-header { min-height: 20px!important }
+.internal-list-item { min-height: 32px!important }
+@for $i from 1 through 6 {
+    h#{$i} { font-family: "Nevis" }
+}
+.v-application .text-h6.internal-link {
+    color: #000000!important;
+    font-family: "Nevis"!important;
+    text-transform: none!important;
+}
