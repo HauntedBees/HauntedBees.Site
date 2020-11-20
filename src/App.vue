@@ -3,7 +3,7 @@
     <v-app-bar class="heading-bar" app dark color="accent" :height="80">
       <div class="mx-auto">
         <router-link to="/">
-          <img :src="require('src/assets/logo.png')" />
+          <img style="max-width:100%" :src="require('src/assets/logo.png')" />
         </router-link>
       </div>
     </v-app-bar>
