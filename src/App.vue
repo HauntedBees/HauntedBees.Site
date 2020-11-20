@@ -2,7 +2,9 @@
   <v-app>
     <v-app-bar class="heading-bar" app dark color="accent" :height="80">
       <div class="mx-auto">
-        <img :src="require('src/assets/logo.png')" />
+        <router-link to="/">
+          <img :src="require('src/assets/logo.png')" />
+        </router-link>
       </div>
     </v-app-bar>
     <v-main dark :class="'mx-auto main-' + $vuetify.breakpoint.name">
@@ -11,8 +13,22 @@
           <ExternalLink :url="link.url" :text="link.text" />
         </v-col>
       </v-row>
+      <v-row class="hidden-lg-and-up mx-2">
+        <v-menu offset-y v-for="(section, idx) in internallinks" :key="idx">
+          <template v-slot:activator="{ on, attrs }">
+            <v-col>
+              <v-btn v-bind="attrs" block color="secondary" tile v-on="on" style="color:#000000">{{section.name}}</v-btn>
+            </v-col>
+          </template>
+          <v-list class="my-0 pb-0">
+            <v-list-item class="internal-list-item" v-for="link in section.values" :key="link.name">
+              <InternalLink :url="link.url" :text="link.name" />
+            </v-list-item>
+          </v-list>
+        </v-menu>
+      </v-row>
       <v-row>
-        <v-col cols="12" md="2" class="px-1">
+        <v-col cols="12" md="2" class="px-1 hidden-md-and-down">
           <v-sheet class="pb-4 beebg">
             <v-container class="pa-0" v-for="(section, idx) in internallinks" :key="idx">
               <v-list class="my-0 pb-0">
@@ -29,8 +45,7 @@
         </v-col>
         <v-col cols="12" md="10" class="px-1">
           <v-sheet class="beebg main-content">
-            <router-view class="px-5 py-2" :key="$route.fullPath" /><!--
-            <span :class="'mx-4 test-' + $vuetify.breakpoint.name">goku</span>-->
+            <router-view class="px-5 py-2" :key="$route.fullPath" />
           </v-sheet>
         </v-col>
       </v-row>
@@ -67,7 +82,7 @@ export default Vue.extend({
       }, {
         name: "Not-Games",
         values: [
-          { url: "/", name: "Abeut" },
+          { url: "/abeut", name: "Abeut" },
           { url: "/databee", name: "DataBee" },
           { url: "/beequestions", name: "Bee Questions!" },
           { url: "/sonic", name: "Sonic" },
@@ -80,7 +95,7 @@ export default Vue.extend({
       { url: "https://twitter.com/hauntedbees", text: "Twitter" },
       { url: "https://hauntedbees.itch.io/", text: "itch.io" },
       { url: "https://hauntedbees.tumblr.com/", text: "Tumblr" },
-      { url: "https://www.facebook.com/HauntedBees", text: "Facebook" },
+      { url: "https://www.instagram.com/hauntedbees/", text: "Instagram" },
       { url: "https://github.com/HauntedBees", text: "GitHub" },
       { url: "https://discord.gg/nEKhZqK", text: "Discord" }
     ]

@@ -25,6 +25,7 @@ export default class BeeQuestions extends Vue {
         { type: "cogs", text: "This game may contain posts of a sexual nature." },
         { type: "cannabis", text: "This game may contain drug references." }
     ]
+    links = [{ url: "/bq/index.html", text: "Check it out here!" }];
     exts = [
         { type: "github", text: "See the source code on GitHub!", link: "https://github.com/HauntedBees/BeeQuestions.Site" },
         { type: "lock", text: "Read the Privacy Policy!", link: "https://www.hauntedbees.com/bq/privacypolicy" }

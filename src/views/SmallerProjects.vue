@@ -127,7 +127,7 @@ export default class CropDrop extends Vue {
     pd_exts = [
         { type: "youtube", text: "Check out the trailer on YouTube!", link: "https://www.youtube.com/watch?v=HZndmD8TyJo" },
         { type: "github", text: "See the source code on GitHub!", link: "https://github.com/HauntedBees/Public-Domains" },
-        { type: "lock", text: "Read the Privacy Policy!", link: "/publicdomainsprivacypolicy" }
+        { type: "lock", text: "Read the Privacy Policy!", internal: true, link: "/privacypolicy" }
     ]
     fp_cws = [{ type: "comment-off", text: "This game contains some explicit language." }]
     fp_links = [{ url: "https://hauntedbees.itch.io/funeral-procession-in-space", text: "Play it now in your browser!" }]

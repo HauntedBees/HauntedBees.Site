@@ -28,7 +28,7 @@ export default class CropDrop extends Vue {
         { type: "google-play", text: "Download it on Google Play!", link: "https://play.google.com/store/apps/details?id=com.hauntedbees.crops" },
         { type: "gamepad-variant", text: "Download it on itch.io!", link: "https://hauntedbees.itch.io/crop-drop" },
         { type: "github", text: "See the source code on GitHub!", link: "https://github.com/HauntedBees/CropDrop" },
-        { type: "lock", text: "Read the Privacy Policy!", link: "/cropdropprivacypolicy" }
+        { type: "lock", text: "Read the Privacy Policy!", internal: true, link: "/privacypolicy" }
     ]
 }
 </script>

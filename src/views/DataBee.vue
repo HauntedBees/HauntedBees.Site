@@ -26,7 +26,8 @@ export default class DataBee extends Vue {
     ]
     exts = [
         { type: "github", text: "See the source code on GitHub!", link: "https://github.com/HauntedBees/DataBee" },
-        { type: "lock", text: "Download it on Google Play!", link: "https://play.google.com/store/apps/details?id=com.hauntedbees.databee" }
+        { type: "google-play", text: "Download it on Google Play!", link: "https://play.google.com/store/apps/details?id=com.hauntedbees.databee" },
+        { type: "lock", text: "Read the Privacy Policy!", internal: true, link: "/privacypolicy" }
     ]
 }
 </script>
