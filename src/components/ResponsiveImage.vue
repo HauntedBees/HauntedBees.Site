@@ -1,7 +1,7 @@
 <template>
 <div class="text-center mb-1">
-    <img :title="text" class="hidden-sm-and-down" :src="bsrc"/>
-    <img :title="text" class="hidden-md-and-up" :src="isrc"/>
+    <img style="max-width:100%" :title="text" class="hidden-sm-and-down" :src="bsrc"/>
+    <img style="max-width:100%" :title="text" class="hidden-md-and-up" :src="isrc"/>
 </div>
 </template>
 <script lang="ts">
