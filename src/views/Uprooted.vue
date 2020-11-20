@@ -3,9 +3,7 @@
     <rimg :bsrc="require('src/assets/banner_uprooted.png')" :isrc="require('src/assets/ico_uprooted.png')"
             text="Vegetables are a valuable weapon." />
     <p class="mx-1">
-        Blockara is a head-to-head action puzzle game where you, one of the best alchemists in the world, must compete in the World Alchemy Tournament for a chance to have
-        your wish granted by the September Dragon! Fight your way to the top in Story Mode or hone your skills in the other game modes!
-        <a href="https://www.hauntedbees.com/Blockara/index.html">Check out the official site to learn more!</a>
+        <em>Uprooted: Meal Replacement Game</em> is a turn-based farming RPG coming soon for PC. More updates will be posted on social media, so check that stuff out!
     </p>
     <links :content="links" />
     <div class="pr-8" style="position:absolute; bottom:10px; width:100%">
