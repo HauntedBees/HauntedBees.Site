@@ -1,5 +1,6 @@
 const path = require("path");
 module.exports = {
+    publicPath: "/main/",
     css: {
       loaderOptions: {
         scss: {}
