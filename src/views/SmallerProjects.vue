@@ -129,7 +129,7 @@ export default class CropDrop extends Vue {
         { type: "github", text: "See the source code on GitHub!", link: "https://github.com/HauntedBees/Public-Domains" },
         { type: "lock", text: "Read the Privacy Policy!", internal: true, link: "/privacypolicy" }
     ]
-    fp_cws = [{ type: "comment-off", text: "This game contains some explicit language." }]
+    fp_cws = [{ type: "comment-alert", text: "This game contains some explicit language." }]
     fp_links = [{ url: "https://hauntedbees.itch.io/funeral-procession-in-space", text: "Play it now in your browser!" }]
     fp_exts = [{ type: "github", text: "See the source code on GitHub!", link: "https://github.com/HauntedBees/Funeral-Procession-in-Space" }]
     uc_links = [
@@ -140,13 +140,13 @@ export default class CropDrop extends Vue {
         { type: "gamepad-variant", text: "Check it out on itch.io!", link: "https://hauntedbees.itch.io/undercooked" },
         { type: "github", text: "See the source code on GitHub!", link: "https://github.com/HauntedBees/Undercooked" }
     ]
-    ws_cws = [{ type: "comment-off", text: "This game contains optional explicit language.", optional: true }]
+    ws_cws = [{ type: "comment-alert", text: "This game contains optional explicit language.", optional: true }]
     ws_links = [{ url: "https://www.hauntedbees.com/games/slime/index.html", text: "Play it now in your browser (Firefox recommended)!" }]
     ws_exts = [
         { type: "gamepad-variant", text: "Check it out on itch.io!", link: "https://hauntedbees.itch.io/wheel-of-slime" },
         { type: "github", text: "See the source code on GitHub!", link: "https://github.com/HauntedBees/Wheel-of-Slime" }
     ]
-    erzr_cws = [{ type: "comment-off", text: "This game contains explicit language." }]
+    erzr_cws = [{ type: "comment-alert", text: "This game contains explicit language." }]
     erzr_links = [
         { url: "https://www.hauntedbees.com/erzcr/index.html", text: "See the fake crowdfunding page!" },
         { url: "https://www.hauntedbees.com/erzcr/epic.html", text: "Play it (if the server's up (which it isn't))!" }

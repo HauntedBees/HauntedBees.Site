@@ -18,7 +18,7 @@
 import { Vue, Component } from 'vue-property-decorator';
 @Component
 export default class FoodPortal extends Vue {
-    cws = [{ type: "comment-off", text: "Some strong language is used in the commentary." }]
+    cws = [{ type: "comment-alert", text: "Some strong language is used in the commentary." }]
     links = [
         { url: "https://www.hauntedbees.com/food/world.html", internal: true, text: "Areund the World" },
         { url: "https://www.hauntedbees.com/food/spice.html", internal: true, text: "Spiceapedia" },

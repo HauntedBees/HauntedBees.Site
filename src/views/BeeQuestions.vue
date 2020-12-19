@@ -20,7 +20,7 @@ import { Vue, Component } from 'vue-property-decorator';
 export default class BeeQuestions extends Vue {
     cws = [
         { type: "account-multiple", text: "This game contains user-generated content." },
-        { type: "comment-off", text: "This game may contain strong language." },
+        { type: "comment-alert", text: "This game may contain strong language." },
         { type: "knife-military", text: "This game may contain descriptions of violence." },
         { type: "cogs", text: "This game may contain posts of a sexual nature." },
         { type: "cannabis", text: "This game may contain drug references." }

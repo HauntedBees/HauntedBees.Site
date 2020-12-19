@@ -18,7 +18,7 @@ import { Vue, Component } from 'vue-property-decorator';
 export default class Uprooted extends Vue {
     cws = [
         { type: "knife-military", text: "This game contains some pixelated blood." },
-        { type: "comment-off", text: "This game contains strong language that can be disabled at any time.", optional: true },
+        { type: "comment-alert", text: "This game contains strong language that can be disabled at any time.", optional: true },
         { type: "cogs", text: "This game contains some innuendo that can be disabled at any time.", optional: true },
         { type: "cannabis", text: "This game contains some drug references that can be disabled at any time.", optional: true }
     ]
