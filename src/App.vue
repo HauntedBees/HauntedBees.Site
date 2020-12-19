@@ -13,19 +13,16 @@
           <ExternalLink :url="link.url" :text="link.text" />
         </v-col>
       </v-row>
-      <v-row class="hidden-lg-and-up mx-2">
-        <v-menu offset-y v-for="(section, idx) in internallinks" :key="idx">
-          <template v-slot:activator="{ on, attrs }">
-            <v-col>
-              <v-btn v-bind="attrs" block color="secondary" tile v-on="on" style="color:#000000">{{section.name}}</v-btn>
-            </v-col>
-          </template>
-          <v-list class="my-0 pb-0">
-            <v-list-item class="internal-list-item" v-for="link in section.values" :key="link.name">
-              <InternalLink :url="link.url" :text="link.name" />
-            </v-list-item>
-          </v-list>
-        </v-menu>
+      <v-row class="hidden-lg-and-up mx-2"> <!-- mobile dropdown -->
+        <v-col v-for="(section, idx) in internallinks" :key="idx">
+          <div class="mobile-select">
+            <select onchange="location=this.value"
+              class="text-h6 text-md-h4 v-btn v-btn--tile v-btn--block elevation-2 v-size--x-large secondary internal-link">
+              <option value="">{{section.name}}</option>
+              <option v-for="link in section.values" :key="link.name" :value="link.url">{{link.name}}</option>
+            </select>
+          </div>
+        </v-col>
       </v-row>
       <v-row>
         <v-col cols="12" md="2" class="px-1 hidden-md-and-down">
