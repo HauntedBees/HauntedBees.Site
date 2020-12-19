@@ -5,7 +5,7 @@
     <p class="mx-1">
         <em>Beegypt</em> or <em>Help! I'm an Ancient Egyptian Beekeeper!</em> is a Free edutainment browser game made for the 
         <ax href="https://itch.io/jam/ssjedutainment">August 2019 Summer Slow Jam</ax> hosted by PIGSquad.
-        It is video game that can technically teach you things about Ancient Egypt and/or Beekeeping.
+        It is a video game that can technically teach you things about Ancient Egypt and/or Beekeeping.
     </p>
     <links :content="links" />
     <div class="pr-8" style="position:absolute; bottom:10px; width:100%">
