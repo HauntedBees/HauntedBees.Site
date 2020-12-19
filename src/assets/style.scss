@@ -35,3 +35,13 @@ p { text-indent: 2em }
     font-family: "Nevis"!important;
     text-transform: none!important;
 }
+
+@media only screen and (max-width: 1400px) {
+    .v-application .text-h6.internal-link {
+        font-size: 16px!important;
+    }
+    .v-application .text-h6.external-link {
+        font-size: 22px!important;
+        height: 38px!important;
+    }
+}
