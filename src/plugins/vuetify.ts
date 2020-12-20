@@ -1,8 +1,9 @@
 import Vue from 'vue';
-import Vuetify from 'vuetify/lib';
+import Vuetify, { VBtn } from 'vuetify/lib';
 Vue.use(Vuetify);
 export default new Vuetify({
     rtl: false,
+    components: { VBtn },
     theme: {
         dark: true,
         themes: {
