@@ -74,7 +74,7 @@ export default Vue.extend({
           { url: "cropdrop", name: "Crop Drop" },
           { url: "blockara", name: "Blockara" },
           { url: "beegypt", name: "Beegypt" },
-          { url: "miscgames", name: "Smaller Projects" }
+          { url: "miscgames", name: "Small Projects" }
         ]
       }, {
         name: "Not-Games",
