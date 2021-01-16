@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
-import store from './store'
 import vuetify from './plugins/vuetify';
 import ResponsiveImage from 'src/components/ResponsiveImage.vue';
 import ContentWarnings from 'src/components/ContentWarnings.vue';
@@ -18,7 +17,6 @@ Vue.component("ax", ExternalAnchor);
 
 new Vue({
   router,
-  store,
   vuetify,
   render: h => h(App)
 }).$mount('#app')
