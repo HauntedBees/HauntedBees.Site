@@ -87,6 +87,7 @@ export default Vue.extend({
           { url: "/beequestions", name: "Bee Questions!" },
           { url: "/sonic", name: "Sonic" },
           { url: "/foodportal", name: "Food Portal" },
+          { url: "/humansounds", name: "\"Human Sounds\"" },
           { url: "/savethebees", name: "Save the Bees" }
         ]
       }

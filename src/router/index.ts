@@ -11,6 +11,7 @@ import DataBee from 'src/views/DataBee.vue';
 import BeeQuestions from 'src/views/BeeQuestions.vue';
 import Sonic from 'src/views/Sonic.vue';
 import FoodPortal from 'src/views/FoodPortal.vue';
+import HumanSounds from 'src/views/HumanSounds.vue';
 import SaveTheBees from 'src/views/SaveTheBees.vue';
 import PrivacyPolicy from 'src/views/PrivacyPolicy.vue';
 
@@ -27,6 +28,7 @@ const routes:Array<RouteConfig> = [
   { path: "/beequestions", name: "BeeQuestions", component: BeeQuestions, meta: { title: "Bee Questions! - Haunted Bees Productions" } },
   { path: "/sonic", name: "Sonic", component: Sonic, meta: { title: "Sonic - Haunted Bees Productions" } },
   { path: "/foodportal", name: "FoodPortal", component: FoodPortal, meta: { title: "Food Portal - Haunted Bees Productions" } },
+  { path: "/humansounds", name: "HumanSounds", component: HumanSounds, meta: { title: "\"Human Sounds\" - Haunted Bees Productions" } },
   { path: "/savethebees", name: "SaveTheBees", component: SaveTheBees, meta: { title: "Save the Bees! - Haunted Bees Productions" } },
   { path: "/privacypolicy", name: "PrivacyPolicy", component: PrivacyPolicy, meta: { title: "Privacy Policy - Haunted Bees Productions" } },
   // TODO: maybe re-add the etymology thing
