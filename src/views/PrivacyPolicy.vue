@@ -1,7 +1,7 @@
 <template>
 <div>
     <h1>Privacy Policy</h1>
-    <h4 class="mb-6">Last updated January 41, 2021</h4>
+    <h4 class="mb-6">Last updated January 15, 2021</h4>
     <p>
         You know how these go. We'll try to make this short because we don't really do anything insidious and we aren't big enough for you to sue us anyway.
         Haunted Bees Productions ("we", "us", "our") care about privacy; even yours! If you have any questions or concerns about this policy, contact us at 
