@@ -7,7 +7,7 @@
         </router-link>
       </div>
     </v-app-bar>
-    <v-main dark :class="'mx-auto main-' + $vuetify.breakpoint.name">
+    <v-main dark :class="'mx-auto mt-4 main-' + $vuetify.breakpoint.name">
       <v-row class="hidden-md-and-down">
         <v-col cols="4" sm="2" class="pa-1" v-for="link in externallinks" :key="link.text">
           <ExternalLink :url="link.url" :text="link.text" />
