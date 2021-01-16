@@ -115,7 +115,7 @@
 import { Vue, Component } from 'vue-property-decorator';
 @Component
 export default class CropDrop extends Vue {
-    general_cws = [{ type: "thumb-up", text: "This game is A-OK for 'the kidz' everywhere!" }]
+    general_cws = [{ type: "thumb-up", text: "This game is A-OK for \"the kidz\" everywhere!" }]
     
     zenn_links = [{ url: "https://hauntedbees.itch.io/basesol", text: "Click here to play on itch.io!" }]
     zenn_exts = [

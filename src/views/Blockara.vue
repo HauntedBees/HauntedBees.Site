@@ -19,7 +19,7 @@
 import { Vue, Component } from 'vue-property-decorator';
 @Component
 export default class Blockara extends Vue {
-    cws = [{ type: "thumb-up", text: "This game is A-OK for 'the kidz' everywhere!" }]
+    cws = [{ type: "thumb-up", text: "This game is A-OK for \"the kidz\" everywhere!" }]
     exts = [
         { type: "youtube", text: "Check out the trailer on YouTube!", link: "https://www.youtube.com/watch?v=YTYN2mgwdAw" },
         { type: "steam", text: "Buy it on Steam!", link: "https://store.steampowered.com/app/652090/Blockara/" },

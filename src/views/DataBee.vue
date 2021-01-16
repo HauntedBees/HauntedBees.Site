@@ -19,7 +19,7 @@
 import { Vue, Component } from 'vue-property-decorator';
 @Component
 export default class DataBee extends Vue {
-    cws = [{ type: "thumb-up", text: "This app is A-OK for 'the kidz' everywhere!" }]
+    cws = [{ type: "thumb-up", text: "This app is A-OK for \"the kidz\" everywhere!" }]
     links = [
         { url: "https://www.hauntedbees.com/databee/app.html", text: "Use the Web App version!" },
         { url: "https://play.google.com/store/apps/details?id=com.hauntedbees.databee", text: "Get it on Google Play!" }

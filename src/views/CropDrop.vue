@@ -16,7 +16,7 @@
 import { Vue, Component } from 'vue-property-decorator';
 @Component
 export default class CropDrop extends Vue {
-    cws = [{ type: "thumb-up", text: "This game is A-OK for 'the kidz' everywhere!" }]
+    cws = [{ type: "thumb-up", text: "This game is A-OK for \"the kidz\" everywhere!" }]
     links = [
         { url: "https://www.hauntedbees.com/games/crop/index.html", internal: true, text: "Click here to play the web app version!" },
         { url: "https://github.com/HauntedBees/CropDrop/blob/master/README.md#compatibility", text: "Click here to see if your browser is supported!" }
