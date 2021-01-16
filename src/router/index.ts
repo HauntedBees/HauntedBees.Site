@@ -15,6 +15,7 @@ import HumanSounds from 'src/views/HumanSounds.vue';
 import SaveTheBees from 'src/views/SaveTheBees.vue';
 import PrivacyPolicy from 'src/views/PrivacyPolicy.vue';
 import Credits from 'src/views/Credits.vue';
+import NotFound from 'src/views/404.vue';
 
 Vue.use(VueRouter)
 const routes:Array<RouteConfig> = [
@@ -33,6 +34,7 @@ const routes:Array<RouteConfig> = [
   { path: "/savethebees", name: "SaveTheBees", component: SaveTheBees, meta: { title: "Save the Bees! - Haunted Bees Productions" } },
   { path: "/licenseinfo", name: "Credits", component: Credits, meta: { title: "Legal Deetz - Haunted Bees Productions" } },
   { path: "/privacypolicy", name: "PrivacyPolicy", component: PrivacyPolicy, meta: { title: "Privacy Policy - Haunted Bees Productions" } },
+  { path: "*", name: "404", component: NotFound, meta: { title: "404 Page Not Found - Haunted Bees Productions" } }
   // TODO: maybe re-add the etymology thing
 ];
 
