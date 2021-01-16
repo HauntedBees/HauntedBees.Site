@@ -4,7 +4,10 @@
 hi this is literally just the source code to my website
 
 ## depencencies
-Standard Vue stuff. Fill this in later.
+The following dependencies are used in this project:
+ * [core-js](https://github.com/zloirock/core-js#readme) is licensed under the [MIT License](https://github.com/zloirock/core-js/blob/master/LICENSE).
+ * [Vue.js](https://vuejs.org/) is licensed under the [MIT License](https://github.com/vuejs/vue/blob/dev/LICENSE).
+ * [Vuetify](https://vuetifyjs.com/en/) is licensed under the [MIT License](https://github.com/vuetifyjs/vuetify/blob/master/LICENSE.md).
 
 ## license
 For the sake of consistency, this code is licensed under [GNU Affero General Public License](https://www.gnu.org/licenses/agpl-3.0.en.html), and its text, data, and art assets are licensed with the [CC BY-SA 4.0 License](https://creativecommons.org/licenses/by-sa/4.0/legalcode). 

@@ -1,7 +1,7 @@
 <template>
 <div>
     <h1>Privacy Policy</h1>
-    <h4 class="mb-6">Last updated November 19, 2020</h4>
+    <h4 class="mb-6">Last updated January 41, 2021</h4>
     <p>
         You know how these go. We'll try to make this short because we don't really do anything insidious and we aren't big enough for you to sue us anyway.
         Haunted Bees Productions ("we", "us", "our") care about privacy; even yours! If you have any questions or concerns about this policy, contact us at 
@@ -10,8 +10,8 @@
     </p>
     <p>
         This privacy policy applies to Haunted Bees mobile apps, their web app counterparts, and the main Haunted Bees website. Retail games and other web apps 
-        may have their own policies that are viewable on their respective privacy policy pages. More precisely, this privacy policy applies to the Android apps 
-        <em>Crop Drop</em>, <em>Public Domains</em>, <em>DataBee</em>, and their web app counterparts hosted on <a href="https://www.hauntedbees.com/" target="_blank">hauntedbees.com</a>.
+        may have their own policies that are viewable on their respective privacy policy pages. More precisely, this privacy policy applies to this site, the Android apps 
+        <em>Crop Drop</em>, <em>Public Domains</em>, and <em>DataBee</em>, and their web app counterparts hosted on <a href="https://www.hauntedbees.com/" target="_blank">hauntedbees.com</a>.
     </p>
     <p>
         <strong>Human-Readable and Concise Summary:</strong> We don't use any third-party analytics, we don't serve advertisements, we don't use cookies, and 

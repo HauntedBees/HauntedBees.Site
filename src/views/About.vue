@@ -33,6 +33,8 @@
         In addition to <router-link to="/savethebees">caring about bees</router-link>, Haunted Bees is very committed to user privacy, so when playing our  
         games or browsing our sites, you can be certain that your data isn't being sold to an advertising company. We also believe that sharing is caring, so 
         nearly everything we make is licensed with a Free or Open Content license, and can be found <ax href="https://github.com/HauntedBees/">on our GitHub</ax>.
+        You can learn also more about all that on <router-link to="/licenseinfo">this Legal Deetz page</router-link> or on <router-link to="/privacypolicy">the
+        privacy policy page</router-link>.
       </p>
     </v-col>
   </v-row>

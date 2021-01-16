@@ -14,6 +14,7 @@ import FoodPortal from 'src/views/FoodPortal.vue';
 import HumanSounds from 'src/views/HumanSounds.vue';
 import SaveTheBees from 'src/views/SaveTheBees.vue';
 import PrivacyPolicy from 'src/views/PrivacyPolicy.vue';
+import Credits from 'src/views/Credits.vue';
 
 Vue.use(VueRouter)
 const routes:Array<RouteConfig> = [
@@ -30,6 +31,7 @@ const routes:Array<RouteConfig> = [
   { path: "/foodportal", name: "FoodPortal", component: FoodPortal, meta: { title: "Food Portal - Haunted Bees Productions" } },
   { path: "/humansounds", name: "HumanSounds", component: HumanSounds, meta: { title: "\"Human Sounds\" - Haunted Bees Productions" } },
   { path: "/savethebees", name: "SaveTheBees", component: SaveTheBees, meta: { title: "Save the Bees! - Haunted Bees Productions" } },
+  { path: "/licenseinfo", name: "Credits", component: Credits, meta: { title: "Legal Deetz - Haunted Bees Productions" } },
   { path: "/privacypolicy", name: "PrivacyPolicy", component: PrivacyPolicy, meta: { title: "Privacy Policy - Haunted Bees Productions" } },
   // TODO: maybe re-add the etymology thing
 ];
