@@ -19,7 +19,7 @@
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
 @Component
-export default class Sonic extends Vue {
+export default class ErrorOccur extends Vue {
     randomThings = [
         { desc: "a head-to-head action puzzle video game", url: "/blockara", internal: true },
         { desc: "an RPG about throwing vegetables at tech billionaires", url: "/uprooted", internal: true },

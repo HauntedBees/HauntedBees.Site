@@ -10,7 +10,7 @@
     <v-main dark :class="'mx-auto mt-4 main-' + $vuetify.breakpoint.name">
       <v-row class="hidden-md-and-down">
         <v-col cols="4" sm="2" class="pa-1" v-for="link in externallinks" :key="link.text">
-          <ExternalLink :url="link.url" :text="link.text" />
+          <ExternalLinkButton :url="link.url" :text="link.text" />
         </v-col>
       </v-row>
       <v-row class="hidden-lg-and-up mx-2"> <!-- mobile dropdown -->
@@ -22,7 +22,7 @@
           </template>
           <v-list class="my-0 pb-0">
             <v-list-item class="internal-list-item" v-for="link in section.values" :key="link.name">
-              <InternalLink :url="link.url" :text="link.name" />
+              <InternalLinkButton :url="link.url" :text="link.name" />
             </v-list-item>
           </v-list>
         </v-menu>
@@ -36,7 +36,7 @@
                   <h3 class="mx-auto">{{section.name}}</h3>
                 </v-list-item>
                 <v-list-item class="internal-list-item" v-for="link in section.values" :key="link.name">
-                  <InternalLink :url="link.url" :text="link.name" />
+                  <InternalLinkButton :url="link.url" :text="link.name" />
                 </v-list-item>
               </v-list>
               <v-divider class="mt-4" v-if="(internallinks.length - 1) !== idx" />
@@ -51,7 +51,7 @@
       </v-row>
       <v-row class="hidden-lg-and-up px-3">
         <v-col cols="4" sm="2" class="pa-1" v-for="link in externallinks" :key="link.text">
-          <ExternalLink :url="link.url" :text="link.text" />
+          <ExternalLinkButton :url="link.url" :text="link.text" />
         </v-col>
       </v-row>
     </v-main>
@@ -62,12 +62,12 @@
 </template>
 <script lang="ts">
 import Vue from 'vue';
-import ExternalLink from 'src/components/ExternalLink.vue';
-import InternalLink from 'src/components/InternalLink.vue';
+import ExternalLinkButton from 'src/components/ExternalLinkButton.vue';
+import InternalLinkButton from 'src/components/InternalLinkButton.vue';
 import 'src/assets/style.scss';
 export default Vue.extend({
   name: 'App',
-  components: { ExternalLink, InternalLink },
+  components: { ExternalLinkButton, InternalLinkButton },
   data: () => ({
     internallinks: [
       {

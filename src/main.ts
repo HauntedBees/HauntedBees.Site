@@ -6,14 +6,14 @@ import ResponsiveImage from 'src/components/ResponsiveImage.vue';
 import ContentWarnings from 'src/components/ContentWarnings.vue';
 import ExternalIcons from 'src/components/ExternalIcons.vue';
 import PageLinks from 'src/components/PageLinks.vue';
-import ExternalAnchor from 'src/components/ExternalAnchor.vue';
+import { ExternalLink } from 'bee-vue-gang';
 
 Vue.config.productionTip = false
 Vue.component("rimg", ResponsiveImage);
 Vue.component("cw", ContentWarnings);
 Vue.component("ext", ExternalIcons);
 Vue.component("links", PageLinks);
-Vue.component("ax", ExternalAnchor);
+Vue.component("ax", ExternalLink);
 
 new Vue({
   router,

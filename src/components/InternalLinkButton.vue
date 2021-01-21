@@ -8,7 +8,7 @@
 <script lang="ts">
 import { Vue, Component, Prop } from 'vue-property-decorator';
 @Component
-export default class InternalLink extends Vue {
+export default class InternalLinkButton extends Vue {
     @Prop() url?:string;
     @Prop() text?:string;
 }

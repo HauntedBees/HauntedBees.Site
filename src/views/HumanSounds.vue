@@ -15,7 +15,7 @@
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
 @Component
-export default class Sonic extends Vue {
+export default class HumanSounds extends Vue {
     cws = [{ type: "thumb-up", text: "This radio show is A-OK for \"the kidz\" everywhere!" }]
     links = [
         { url: "https://www.hauntedbees.com/hs/index.html", text: "Check out the website!" },
