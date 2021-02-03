@@ -21,15 +21,15 @@ import { Vue, Component } from 'vue-property-decorator';
 @Component
 export default class ErrorOccur extends Vue {
     randomThings = [
-        { desc: "a head-to-head action puzzle video game", url: "/blockara", internal: true },
+        { desc: "a head-to-head action puzzle video game", url: "/blockarainfo", internal: true },
         { desc: "an RPG about throwing vegetables at tech billionaires", url: "/uprooted", internal: true },
         { desc: "a tile-matching farm puzzler", url: "/cropdrop", internal: true },
         { desc: "an educational game about keeping bees in ancient Egypt", url: "/beegypt", internal: true },
-        { desc: "a database of companies and their often-hard-to-identify owners, along with their sketchy business practices", url: "https://www.hauntedbees.com/sonic.html", internal: false },
+        { desc: "a database of companies and their often-hard-to-identify owners, along with their sketchy business practices", url: "https://www.hauntedbees.com/sonic", internal: false },
         { desc: "a digital tour of music and food from around the world", url: "https://www.hauntedbees.com/food/world", internal: false },
         { desc: "a spice and herb database with information about what spices go best with each other", url: "https://www.hauntedbees.com/food/spice", internal: false },
         { desc: "a radio show about world music", url: "/humansounds", internal: true },
-        { desc: "a Question & Answer website... but in reverse", url: "https://www.hauntedbees.com/bq/index.html", internal: false },
+        { desc: "a Question & Answer website... but in reverse", url: "https://www.hauntedbees.com/bq", internal: false },
         { desc: "a bunch of small games made for Game Jams and such", url: "/miscgames", internal: true }
     ];
     randomThing = this.randomThings[0];

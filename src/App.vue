@@ -75,7 +75,7 @@ export default Vue.extend({
         values: [
           { url: "/uprooted", name: "Uprooted" },
           { url: "/cropdrop", name: "Crop Drop" },
-          { url: "/blockara", name: "Blockara" },
+          { url: "/blockarainfo", name: "Blockara" },
           { url: "/beegypt", name: "Beegypt" },
           { url: "/miscgames", name: "Small Projects" }
         ]
@@ -85,7 +85,7 @@ export default Vue.extend({
           { url: "/abeut", name: "Abeut" },
           { url: "/databee", name: "DataBee" },
           { url: "/beequestions", name: "Bee Questions!" },
-          { url: "/sonic", name: "Sonic" },
+          { url: "/sonicinfo", name: "Sonic" },
           { url: "/foodportal", name: "Food Portal" },
           { url: "/humansounds", name: "\"Human Sounds\"" },
           { url: "/savethebees", name: "Save the Bees" }

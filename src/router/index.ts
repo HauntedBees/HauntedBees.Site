@@ -20,7 +20,7 @@ import NotFound from 'src/views/404.vue';
 Vue.use(VueRouter)
 const routes:Array<RouteConfig> = [
   { path: "/", name: "Home", component: Home, meta: { title: "Haunted Bees Productions" } },
-  { path: "/blockara", name: "Blockara", component: Blockara, meta: { title: "Blockara - Haunted Bees Productions" } },
+  { path: "/blockarainfo", name: "Blockara", component: Blockara, meta: { title: "Blockara - Haunted Bees Productions" } },
   { path: "/uprooted", name: "Uprooted", component: Uprooted, meta: { title: "Uprooted - Haunted Bees Productions" } },
   { path: "/cropdrop", name: "CropDrop", component: CropDrop, meta: { title: "Crop Drop - Haunted Bees Productions" } },
   { path: "/beegypt", name: "Beegypt", component: Beegypt, meta: { title: "Beegypt - Haunted Bees Productions" } },
@@ -28,7 +28,7 @@ const routes:Array<RouteConfig> = [
   { path: "/abeut", name: "About", component: About, meta: { title: "Abeut Us - Haunted Bees Productions" } },
   { path: "/databee", name: "DataBee", component: DataBee, meta: { title: "DataBee - Haunted Bees Productions" } },
   { path: "/beequestions", name: "BeeQuestions", component: BeeQuestions, meta: { title: "Bee Questions! - Haunted Bees Productions" } },
-  { path: "/sonic", name: "Sonic", component: Sonic, meta: { title: "Sonic - Haunted Bees Productions" } },
+  { path: "/sonicinfo", name: "Sonic", component: Sonic, meta: { title: "Sonic - Haunted Bees Productions" } },
   { path: "/foodportal", name: "FoodPortal", component: FoodPortal, meta: { title: "Food Portal - Haunted Bees Productions" } },
   { path: "/humansounds", name: "HumanSounds", component: HumanSounds, meta: { title: "\"Human Sounds\" - Haunted Bees Productions" } },
   { path: "/savethebees", name: "SaveTheBees", component: SaveTheBees, meta: { title: "Save the Bees! - Haunted Bees Productions" } },

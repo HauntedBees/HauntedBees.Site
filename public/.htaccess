@@ -9,7 +9,7 @@ DirectoryIndex index.html
     ExpiresByType image/gif "access 1 year"
     ExpiresByType image/png "access 1 year"
     ExpiresByType image/x-icon "access 1 month"
-    # Site Parts (filename-based cache busting already exists)
+    # Site Parts (filename-based cache busting is present)
     ExpiresByType text/css "access 1 year"
     ExpiresByType application/javascript "access 1 year"
     # Fonts
@@ -31,24 +31,29 @@ RewriteEngine On
 RewriteRule ^API/([^/]*)/([^/]*)/(.*)$ /API/API.php?controller=$1&method=$2&param=$3 [L]
 RewriteRule ^API($|/) - [L,QSA]
 
-# Sonic (routing is different from other Vue sites, hence different rewrite rule)
-RewriteRule ^sonic.html(.*)$ sonic/index.html$1
+# Game Sites
+RewriteRule ^Blockara/([^/]*)\.html$ /Blockara/pageLoader.php?path=$1 [L]
+RewriteRule ^Blockara($|/) - [L]
+RewriteRule ^games($|/) - [L]
+
+# Important Folders
+RewriteRule ^common($|/) - [L]
+RewriteRule ^css($|/) - [L]
+RewriteRule ^files($|/) - [L]
+RewriteRule ^img($|/) - [L]
+RewriteRule ^js($|/) - [L]
+RewriteRule ^misc($|/) - [L]
 
 # Legacy Content
-RewriteRule ^Blockara/([^/]*)\.html$ /Blockara/pageLoader.php?path=$1 [L]
-RewriteRule ^ws/([^/]*)/(.*)$ /webService/webService.php?function=$1&$2 [L]
-RewriteRule ^misc($|/) - [L]
+RewriteRule ^legacy($|/) - [L]
 RewriteRule ^ling($|/) - [L]
 RewriteRule ^press($|/) - [L]
-RewriteRule ^legacy($|/) - [L]
+RewriteRule ^ws/([^/]*)/(.*)$ /webService/webService.php?function=$1&$2 [L]
 
 # Main Site
-RewriteBase /
 RewriteRule ^index\.html$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-
 ## Vue routes won't include periods, so let files through for real 404 errors instead of vue routed 404s
 RewriteRule \. - [L]
-
 RewriteRule . /index.html [L]

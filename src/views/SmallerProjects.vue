@@ -76,24 +76,24 @@
         </v-col>
         <v-col cols="12" sm="6">
             <v-card color="secondary" light shaped elevation="3">
+                <h3 class="text-center">Amicom</h3>
+                <p class="mx-3">An unfinished virtual pet. Raise a baby animal. Play with it. You know how these work.</p>
+                <links :content="ac_links" />
+                <div class="px-3" style="position:absolute; bottom:5px; width:100%">
+                    <cw class="float-left" :altColor="true" :content="general_cws   " />
+                </div>
+            </v-card>
+        </v-col>
+    </v-row>
+    <!--<v-row class="pt-1">
+        <v-col cols="12" sm="6">
+            <v-card color="secondary" light shaped elevation="3">
                 <h3 class="text-center">Epic Retro Zombiecraft Royaleguelike - but also there's farming</h3>
                 <p class="mx-3">A turn-based battle royale humans vs zombies crafting game, with farming. A humor joke for April Fool's Day 2018..</p>
                 <links :content="erzr_links" />
                 <div class="px-3" style="position:absolute; bottom:5px; width:100%">
                     <cw class="float-left" :altColor="true" :content="erzr_cws" />
                     <ext class="float-right" :altColor="true" :content="erzr_exts" />
-                </div>
-            </v-card>
-        </v-col>
-    </v-row>
-    <v-row class="pt-1">
-        <v-col cols="12" sm="6">
-            <v-card color="secondary" light shaped elevation="3">
-                <h3 class="text-center">Amicom</h3>
-                <p class="mx-3">An unfinished virtual pet. Raise a baby animal. Play with it. You know how these work.</p>
-                <links :content="ac_links" />
-                <div class="px-3" style="position:absolute; bottom:5px; width:100%">
-                    <cw class="float-left" :altColor="true" :content="general_cws   " />
                 </div>
             </v-card>
         </v-col>
@@ -108,7 +108,7 @@
                 </div>
             </v-card>
         </v-col>
-    </v-row>
+    </v-row>-->
 </div>
 </template>
 <script lang="ts">
@@ -146,12 +146,12 @@ export default class SmallerProjects extends Vue {
         { type: "gamepad-variant", text: "Check it out on itch.io!", link: "https://hauntedbees.itch.io/wheel-of-slime" },
         { type: "github", text: "See the source code on GitHub!", link: "https://github.com/HauntedBees/Wheel-of-Slime" }
     ]
-    erzr_cws = [{ type: "comment-alert", text: "This game contains explicit language." }]
+    /*erzr_cws = [{ type: "comment-alert", text: "This game contains explicit language." }]
     erzr_links = [
         { url: "https://www.hauntedbees.com/erzcr/index.html", text: "See the fake crowdfunding page!" },
         { url: "https://www.hauntedbees.com/erzcr/epic.html", text: "Play it (if the server's up (which it isn't))!" }
     ]
-    erzr_exts = [{ type: "github", text: "See the source code on GitHub!", link: "https://github.com/HauntedBees/EpicRetroZombiecraftRoyaleguelike" }]
+    erzr_exts = [{ type: "github", text: "See the source code on GitHub!", link: "https://github.com/HauntedBees/EpicRetroZombiecraftRoyaleguelike" }]*/
     ac_links = [{ url: "https://www.hauntedbees.com/games/pet/pet.html", text: "Play it now in your browser (works best on mobile)!" }]
     wc_links = [{ url: "https://www.deviantart.com/psychopop/art/Whack-a-Craft-173782034", text: "Play it now on deviantArt!" }]
 }

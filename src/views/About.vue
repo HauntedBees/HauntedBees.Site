@@ -5,7 +5,7 @@
     <v-col cols="12" sm="6">
       <p class="mx-1">
         <em>Haunted Bees Productions</em> is a video game and media studio founded in 2012 by Sean Finch. Our first game,
-        <em><router-link to="/blockara">Blockara</router-link></em>, was released on April 21, 2016, for computers and Wii U, getting a Steam release
+        <em><router-link to="/blockarainfo">Blockara</router-link></em>, was released on April 21, 2016, for computers and Wii U, getting a Steam release
         a year later. Since then, we've released a few mobile games and apps on Google Play such as <em><router-link to="/cropdrop">Crop Drop</router-link></em>,
         several smaller projects for game jams and holidays, and are hard at work on our next flagship game, <em><router-link to="/uprooted">Uprooted</router-link></em>.
       </p>

@@ -26,10 +26,10 @@ export default class Sonic extends Vue {
         { type: "cogs", text: "Some data describes sexual assault and related activities, usually hidden behind content warnings." },
         { type: "cannabis", text: "Some data describes drug usage and companies that deal with drugs." }
     ]
-    links = [{ url: "https://www.hauntedbees.com/sonic.html", text: "Start browsing now!" }]
+    links = [{ url: "https://www.hauntedbees.com/sonic/", text: "Start browsing now!" }]
     exts = [
         { type: "github", text: "See the source code on GitHub!", link: "https://github.com/HauntedBees/Sonic" },
-        { type: "lock", text: "Read the Privacy Policy!", link: "https://www.hauntedbees.com/sonic.html#/info/privacy" }
+        { type: "lock", text: "Read the Privacy Policy!", link: "https://www.hauntedbees.com/sonic/info/privacy" }
     ]
 }
 </script>
