@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VennMa</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="legacy/bootstrap.min.css" type="text/css" media="screen"/>
+        <link rel="stylesheet" href="legacy/bootstrap-template.css" type="text/css" media="screen"/>
+        <link rel="stylesheet" href="legacy/jquery-jvectormap-2.0.3.css" type="text/css" media="screen"/>
+        <link rel="stylesheet" href="legacy/food.css" type="text/css" media="screen"/>
+        <style>
+            #main { padding-top: 0.5rem }
+            #content {
+                margin-top: 1rem;
+                text-align: center;
+            }
+            #textBoxes {
+                margin: 0 auto;
+                width: 100%;
+            }
+            #canvas {
+                border: 1px solid #000000;
+                width: 100%;
+            }
+            @media screen and (orientation:landscape) {
+                #canvas { width: 33% }
+            }
+            input { text-align: center }
+            .color { height: 38px }
+            #template { display: none }
+            /*#addMore {
+                cursor: pointer;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                user-select: none;
+            }
+            #addMore h1 { font-size: 82px; margin-bottom: -10px; }
+            #addMore.disabled {
+                cursor: not-allowed;
+                background-color: #68C2D1 !important;
+            }*/
+        </style>
+    </head>
+    <body class="bg-dark text-white">
+        <div class="container-fluid">
+            <div class="row">
+                <main id="main" role="main" class="px-4 col-md-12">
+                    <div id="everythingButTheCredits">
+                        <div class="showAtStart text-center">
+                            <h1>VennMa</h1>
+                            <h4 id="subtitle">Venn Diagram Maker</h4>
+                        </div>
+                        <div class="showInEditor text-center">
+                            <h6>VennMa</h6>
+                        </div>
+                        <div id="setup" class="showAtStart px-4">
+                            <p>You wanna make a quick venn diagram? I gotchu covered. No signups, no bullshit. Type text, get diagram. Change colors if you want to.</p>
+                            <p>The first sections are for your sets. Title them, then enter values - line by line - that are unique to them. After that are the intersections; 
+                            fill them in with the shared values - line by line.</p>
+                            <p>Once the diagram looks how you want it, just click the Save button at the bottom (or right click and click the Save option if you're on a computer). 
+                            It's yours, my friend. Now just pick what kind of diagram you want. More coming soon, maybe.</p>
+                            <div class="text-center">
+                                <button class="btn btn-primary btn" data-size="2">2-Value</button>
+                                <button class="btn btn-primary btn" data-size="3">3-Value</button>
+                                <button class="btn btn-primary btn" data-size="4">4-Value*</button>
+                            </div>
+                            <p>* 4-Value is not a true diagram as A+D and B+C are not shown. Work In Progress.</p>
+                        </div>
+                        <div id="content" class="showInEditor" style="display:none">
+                            <canvas id="canvas" width="2000" height="2000"></canvas>
+                            <div id="buttons">
+                            </div>
+                            <div id="textBoxes" class="row d-flex justify-content-center">
+                                <!--<div id="addMore" class="card bg-info">
+                                    <h1>+</h1>
+                                    <h5>Add More</h5>
+                                </div>-->
+                            </div>
+                            <div class="mt-2">
+                                <a id="saveBtn" download="venn.png" href="#" class="btn btn-primary btn-lg">Save</a>
+                            </div>
+                            <div class="mt-5">
+                                <button id="startOver" class="btn btn-secondary btn-sm">Start Over</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="credits" class="px-4" style="display: none">
+                        <h3>Legal Garbo</h3>
+                        <p>VennMa is &copy; 2019 <a href="mailto:fench@hauntedbees.com">Sean Finch</a> and <a href="https://www.hauntedbees.com">Haunted Bees Productions</a>. 
+                            All source code is licensed under the <a href="https://www.gnu.org/licenses/agpl-3.0.en.html" target="_blank">GNU AGPLv3</a> license. Diagrams 
+                            created using this page are licensed under the <a href="https://creativecommons.org/share-your-work/public-domain/cc0/" target="_blank">CC0 Public
+                            Domain License</a> and can be used for any purpose in any context, with no attribution needed.</p>
+                        <p>We use a self-hosted <a href="https://awstats.sourceforge.io/" target="_blank">AWStats</a> installation for webpage analytics. Your data will never leave Haunted Bees'
+                            servers or be shared with anybody else. We just want to know where people are coming from in the event this page gets popular or something, you know what
+                            I mean? Like, do we thank some blogger? A Facebook post? Reddit? Only one way to find out and that's analytics, babey! !</p>
+                        <div class="text-center">
+                            <button id="coolThanks" class="btn btn-primary">Cool, Thanks.</button>
+                        </div>
+                    </div>
+                </main>
+                <footer class="footer fixed-bottom">
+                    <a class="copyrightLink" href="#copyright">&copy; 2019 Sean Finch / Haunted Bees Productions</a>
+                </footer>
+            </div>
+        </div>
+        <div id="template">
+            <div id="cardTemplate" class="card val">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <input type="color" class="color form-control">
+                    </div>
+                    <input type="text" class="header form-control">
+                </div>
+                <textarea class="form-control"></textarea>
+                <!--<button class="btn btn-danger remove">Remove</button>-->
+            </div>
+            <div id="cardEndTemplate" class="card val">
+                <input type="text" disabled="disabled" class="header form-control">
+                <textarea class="form-control union"></textarea>
+                <!--<button class="btn btn-danger" disabled="disabled">&nbsp;</button>-->
+            </div>
+        </div>
+        <script type="text/javascript" src="legacy/jquery.min.js"></script>
+        <script type="text/javascript" src="legacy/venn.js"></script>
+    </body>
+</html>
