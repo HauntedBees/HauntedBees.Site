@@ -49,7 +49,7 @@
           </v-sheet>
         </v-col>
       </v-row>
-      <v-row class="hidden-lg-and-up px-3">
+      <v-row class="hidden-lg-and-up px-3 mb-2">
         <v-col cols="4" sm="2" class="pa-1" v-for="link in externallinks" :key="link.text">
           <ExternalLinkButton :url="link.url" :text="link.text" />
         </v-col>
