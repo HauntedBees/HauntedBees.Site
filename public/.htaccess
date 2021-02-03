@@ -54,7 +54,6 @@ RewriteRule ^sonic.html(.*)$ sonic/index.html$1
 # Legacy Content
 RewriteRule ^Blockara/([^/]*)\.html$ /Blockara/pageLoader.php?path=$1 [L]
 RewriteRule ^ws/([^/]*)/(.*)$ /webService/webService.php?function=$1&$2 [L]
-RewriteRule ^wstest/([^/]*)/([^/]*)/(.*)$ /webService/$1.php?function=$2&$3 [L]
 
 # Main Site
 RewriteBase /

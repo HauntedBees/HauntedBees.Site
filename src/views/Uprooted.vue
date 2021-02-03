@@ -28,7 +28,7 @@ export default class Uprooted extends Vue {
         { url: "https://discord.gg/nEKhZqK", text: "Join the official Haunted Bees Discord server!" }
     ]
     exts = [
-        { type: "google", text: "Download it on Google Play!", link: "https://play.google.com/store/apps/details?id=com.hauntedbees.publicdomains" },
+        { type: "google-play", text: "Download it on Google Play!", link: "https://play.google.com/store/apps/details?id=com.hauntedbees.publicdomains" },
         { type: "github", text: "See the source code on GitHub!", link: "https://github.com/HauntedBees/Uprooted" }
     ]
 }
