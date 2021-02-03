@@ -30,26 +30,13 @@ RewriteEngine On
 # API
 RewriteRule ^API/([^/]*)/([^/]*)/(.*)$ /API/API.php?controller=$1&method=$2&param=$3 [L]
 RewriteRule ^API($|/) - [L,QSA]
+## Legacy API
+RewriteRule ^ws/([^/]*)/(.*)$ /webService/webService.php?function=$1&$2 [L]
 
 # Game Sites
 RewriteRule ^Blockara/([^/]*)\.html$ /Blockara/pageLoader.php?path=$1 [L]
 RewriteRule ^Blockara($|/) - [L]
 RewriteRule ^games($|/) - [L]
-RewriteRule ^hs($|/) - [L]
-
-# Important Folders
-RewriteRule ^common($|/) - [L]
-RewriteRule ^css($|/) - [L]
-RewriteRule ^files($|/) - [L]
-RewriteRule ^img($|/) - [L]
-RewriteRule ^js($|/) - [L]
-RewriteRule ^misc($|/) - [L]
-
-# Legacy Content
-RewriteRule ^legacy($|/) - [L]
-RewriteRule ^ling($|/) - [L]
-RewriteRule ^press($|/) - [L]
-RewriteRule ^ws/([^/]*)/(.*)$ /webService/webService.php?function=$1&$2 [L]
 
 # Main Site
 RewriteRule ^index\.html$ - [L]
