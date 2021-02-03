@@ -38,6 +38,8 @@ RewriteRule ^sonic.html(.*)$ sonic/index.html$1
 RewriteRule ^Blockara/([^/]*)\.html$ /Blockara/pageLoader.php?path=$1 [L]
 RewriteRule ^ws/([^/]*)/(.*)$ /webService/webService.php?function=$1&$2 [L]
 RewriteRule ^misc($|/) - [L]
+RewriteRule ^ling($|/) - [L]
+RewriteRule ^press($|/) - [L]
 RewriteRule ^legacy($|/) - [L]
 
 # Main Site
