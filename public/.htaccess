@@ -31,29 +31,14 @@ RewriteEngine On
 RewriteRule ^API/([^/]*)/([^/]*)/(.*)$ /API/API.php?controller=$1&method=$2&param=$3 [L]
 RewriteRule ^API($|/) - [L,QSA]
 
-# Food Portal
-## Recipe Getter
-RewriteRule ^food/getRecipe/([^/]*)$ /food/worldRecipes.php?recipe=$1 [L,QSA]
-RewriteRule ^food/getRecipe/([^/]*)/(.*)$ /food/worldRecipes.php?recipe=$1|$2 [L,QSA]
-RewriteRule ^food/worldRecipes.php - [L,QSA]
-## Main Site
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^food(?:/.*)?$ food/index.html [L,QSA]
-RewriteRule ^food.html(.*)$ food/index.html$1
-
-# Bee Questions
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^bq(?:/.*)?$ bq/index.html [L,QSA]
-RewriteRule ^bq.html(.*)$ bq/index.html$1
-
 # Sonic (routing is different from other Vue sites, hence different rewrite rule)
 RewriteRule ^sonic.html(.*)$ sonic/index.html$1
 
 # Legacy Content
 RewriteRule ^Blockara/([^/]*)\.html$ /Blockara/pageLoader.php?path=$1 [L]
 RewriteRule ^ws/([^/]*)/(.*)$ /webService/webService.php?function=$1&$2 [L]
+RewriteRule ^misc($|/) - [L]
+RewriteRule ^legacy($|/) - [L]
 
 # Main Site
 RewriteBase /
@@ -61,9 +46,7 @@ RewriteRule ^index\.html$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
-## Vue routes won't include periods, so let files through for 404 errors
-## not sure why the Venn rule is necessary
-RewriteRule ^venn\.html$ - [L]
+## Vue routes won't include periods, so let files through for real 404 errors instead of vue routed 404s
 RewriteRule \. - [L]
 
 RewriteRule . /index.html [L]
