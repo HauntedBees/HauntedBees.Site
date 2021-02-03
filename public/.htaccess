@@ -1,67 +1,69 @@
-DirectoryIndex pageLoader.php
+DirectoryIndex index.html
 
-## EXPIRES CACHING ##
+# Expires Headers
 <IfModule mod_expires.c>
-ExpiresActive On
-ExpiresByType image/jpg "access 1 year"
-ExpiresByType image/jpeg "access 1 year"
-ExpiresByType image/gif "access 1 year"
-ExpiresByType image/png "access 1 year"
-ExpiresByType text/css "access 1 month"
-ExpiresByType text/html "access 1 month"
+    ExpiresActive On
+    # Images
+    ExpiresByType image/jpg "access 1 year"
+    ExpiresByType image/jpeg "access 1 year"
+    ExpiresByType image/gif "access 1 year"
+    ExpiresByType image/png "access 1 year"
+    ExpiresByType image/x-icon "access 1 month"
+    # Site Parts (filename-based cache busting already exists)
+    ExpiresByType text/css "access 1 year"
+    ExpiresByType application/javascript "access 1 year"
+    # Fonts
+    ExpiresByType application/font-woff2 "access plus 1 month"
+    ExpiresByType application/font-woff "access plus 1 month"
+    ExpiresByType application/vnd.ms-fontobject "access plus 1 month"
+    ExpiresByType application/x-font-ttf "access plus 1 month"
+    ExpiresByType font/opentype "access plus 1 month"
+    ExpiresByType image/svg+xml "access plus 1 month"
 </IfModule>
-## EXPIRES CACHING ##
 
-ErrorDocument 403 /err403.html
-## ErrorDocument 404 /err404.html ##
-ErrorDocument 404 "<h1>That's gonna be a 404 error from me, dog. A better 404 error page is coming soon.</h1>"
+ErrorDocument 401 /403.html
+ErrorDocument 403 /403.html
+ErrorDocument 404 /404.html
 
 RewriteEngine On
 
-RewriteCond %{HTTP_HOST} (.*)\.blockara\.com$ [NC]
-RewriteRule ^(.*).html$ https://www.hauntedbees.com/Blockara/$1.html [L]
-
-RewriteCond %{HTTP_HOST} (.*)\blockara\.com$ [NC]
-RewriteRule ^(.*)$ https://www.hauntedbees.com/Blockara/index.html [L]
-
-## BETA STUFF ##
+# API
 RewriteRule ^API/([^/]*)/([^/]*)/(.*)$ /API/API.php?controller=$1&method=$2&param=$3 [L]
+RewriteRule ^API($|/) - [L,QSA]
 
+# Food Portal
+## Recipe Getter
+RewriteRule ^food/getRecipe/([^/]*)$ /food/worldRecipes.php?recipe=$1 [L,QSA]
+RewriteRule ^food/getRecipe/([^/]*)/(.*)$ /food/worldRecipes.php?recipe=$1|$2 [L,QSA]
+RewriteRule ^food/worldRecipes.php - [L,QSA]
+## Main Site
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^food(?:/.*)?$ food/index.html [L,QSA]
+RewriteRule ^food.html(.*)$ food/index.html$1
+
+# Bee Questions
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^bq(?:/.*)?$ bq/index.html [L,QSA]
+RewriteRule ^bq.html(.*)$ bq/index.html$1
 
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^main(?:/.*)?$ main/index.html [L,QSA]
-
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^food-beta(?:/.*)?$ food-beta/index.html [L,QSA]
-## END BETA STUFF ##
-
+# Sonic (routing is different from other Vue sites, hence different rewrite rule)
 RewriteRule ^sonic.html(.*)$ sonic/index.html$1
 
-RewriteRule ^crop($|/) - [L]
-RewriteRule ^sonic($|/) - [L]
-RewriteRule ^beezone($|/) - [L]
-RewriteRule ^databee($|/) - [L]
-RewriteRule ^erzcr($|/) - [L]
-RewriteRule ^analytics($|/) - [L]
-RewriteRule ^venn.html$ - [L]
-
-RewriteRule ^bq_old/$ /bq_old/index.php [L,QSA]
-RewriteRule ^bq_old/answers/([^/]*)$ /bq_old/viewAnswer.php?answer=$1 [L,QSA]
-RewriteRule ^bq_old/tags/([^/]*)$ /bq_old/answersByTag.php?tag=$1 [L]
-RewriteRule ^bq_old/users/([^/]*)$ /bq_old/user.php?user=$1 [L]
-RewriteRule ^bq_old/index.html$ /bq_old/index.php [L,QSA]
-RewriteRule ^bq_old/about.html$ /bq_old/about.php [L]
-
-RewriteRule ^food/getRecipe/([^/]*)$ /food/worldRecipes.php?recipe=$1 [L,QSA]
-RewriteRule ^food/getRecipe/([^/]*)/(.*)$ /food/worldRecipes.php?recipe=$1|$2 [L,QSA]
-
+# Legacy Content
+RewriteRule ^Blockara/([^/]*)\.html$ /Blockara/pageLoader.php?path=$1 [L]
 RewriteRule ^ws/([^/]*)/(.*)$ /webService/webService.php?function=$1&$2 [L]
 RewriteRule ^wstest/([^/]*)/([^/]*)/(.*)$ /webService/$1.php?function=$2&$3 [L]
-RewriteRule ^Blockara/([^/]*)\.html$ /Blockara/pageLoader.php?path=$1 [L]
-RewriteRule ^misc/([^/]*)\.html$ pageLoader_misc.php?path=$1 [L]
-RewriteRule ^([^/]*)\.html$ pageLoader.php?path=$1 [L]
+
+# Main Site
+RewriteBase /
+RewriteRule ^index\.html$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+## Vue routes won't include periods, so let files through for 404 errors; not sure why the Venn part is necessary
+RewriteRule ^venn\.html$ - [L]
+RewriteRule \. - [L]
+
+RewriteRule . /index.html [L]
