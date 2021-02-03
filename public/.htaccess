@@ -61,7 +61,8 @@ RewriteRule ^index\.html$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
-## Vue routes won't include periods, so let files through for 404 errors; not sure why the Venn part is necessary
+## Vue routes won't include periods, so let files through for 404 errors
+## not sure why the Venn rule is necessary
 RewriteRule ^venn\.html$ - [L]
 RewriteRule \. - [L]
 
