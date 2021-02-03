@@ -35,6 +35,7 @@ RewriteRule ^API($|/) - [L,QSA]
 RewriteRule ^Blockara/([^/]*)\.html$ /Blockara/pageLoader.php?path=$1 [L]
 RewriteRule ^Blockara($|/) - [L]
 RewriteRule ^games($|/) - [L]
+RewriteRule ^hs($|/) - [L]
 
 # Important Folders
 RewriteRule ^common($|/) - [L]
