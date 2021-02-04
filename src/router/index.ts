@@ -20,6 +20,7 @@ import NotFound from 'src/views/404.vue';
 Vue.use(VueRouter)
 const routes:Array<RouteConfig> = [
   { path: "/", name: "Home", component: Home, meta: { title: "Haunted Bees Productions" } },
+  { path: "/index.html", name: "Home", component: Home, meta: { title: "Haunted Bees Productions" } },
   { path: "/blockarainfo", name: "Blockara", component: Blockara, meta: { title: "Blockara - Haunted Bees Productions" } },
   { path: "/uprooted", name: "Uprooted", component: Uprooted, meta: { title: "Uprooted - Haunted Bees Productions" } },
   { path: "/cropdrop", name: "CropDrop", component: CropDrop, meta: { title: "Crop Drop - Haunted Bees Productions" } },
