@@ -76,6 +76,7 @@ export default Vue.extend({
           { url: "/uprooted", name: "Uprooted" },
           { url: "/cropdrop", name: "Crop Drop" },
           { url: "/blockarainfo", name: "Blockara" },
+          { url: "/sonicshock", name: "Sonic Shock" },
           { url: "/beegypt", name: "Beegypt" },
           { url: "/miscgames", name: "Small Projects" }
         ]

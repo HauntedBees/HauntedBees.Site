@@ -10,6 +10,7 @@ import SmallerProjects from 'src/views/SmallerProjects.vue';
 import DataBee from 'src/views/DataBee.vue';
 import BeeQuestions from 'src/views/BeeQuestions.vue';
 import Sonic from 'src/views/Sonic.vue';
+import SonicShock from 'src/views/SonicShock.vue';
 import FoodPortal from 'src/views/FoodPortal.vue';
 import HumanSounds from 'src/views/HumanSounds.vue';
 import SaveTheBees from 'src/views/SaveTheBees.vue';
@@ -25,6 +26,7 @@ const routes:Array<RouteConfig> = [
   { path: "/uprooted", name: "Uprooted", component: Uprooted, meta: { title: "Uprooted - Haunted Bees Productions" } },
   { path: "/cropdrop", name: "CropDrop", component: CropDrop, meta: { title: "Crop Drop - Haunted Bees Productions" } },
   { path: "/beegypt", name: "Beegypt", component: Beegypt, meta: { title: "Beegypt - Haunted Bees Productions" } },
+  { path: "/sonicshock", name: "Sonic Shock", component: SonicShock, meta: { title: "Sonic Shock - Haunted Bees Productions" } },
   { path: "/miscgames", name: "SmallerProjects", component: SmallerProjects, meta: { title: "Smaller Projects - Haunted Bees Productions" } },
   { path: "/abeut", name: "About", component: About, meta: { title: "Abeut Us - Haunted Bees Productions" } },
   { path: "/databee", name: "DataBee", component: DataBee, meta: { title: "DataBee - Haunted Bees Productions" } },
