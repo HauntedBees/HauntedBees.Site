@@ -34,21 +34,14 @@ RewriteRule ^API8($|/) - [L,QSA]
 # API
 RewriteRule ^API/([^/]*)/([^/]*)/(.*)$ /API/API.php?controller=$1&method=$2&param=$3 [L]
 RewriteRule ^API($|/) - [L,QSA]
-## Legacy API
+# Legacy API
 RewriteRule ^ws/([^/]*)/(.*)$ /webService/webService.php?function=$1&$2 [L]
 
 # Game Sites
 RewriteRule ^Blockara/([^/]*)\.html$ /Blockara/pageLoader.php?path=$1 [L]
 RewriteRule ^Blockara($|/) - [L]
-RewriteRule ^games($|/) - [L]
-RewriteRule ^newtest($|/) - [L]
-RewriteRule ^.well-known($|/) - [L]
 
 # Main Site
 RewriteRule ^sonic\.html$ /sonic [L]
 RewriteRule ^index\.html$ - [L]
-## Vue routes won't include periods, so let files through for real 404 errors instead of vue routed 404s
-RewriteRule \. - [L]
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /index.html [L]
+RewriteRule ^([a-z_]+)$ $1.html
