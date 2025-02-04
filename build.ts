@@ -83,15 +83,15 @@ function GenerateJavascriptFile() {
 		main
 	];
 	const code = str.join("\n");
-	fs.writeFileSync(path.join(__dirname, exportPath, "bees.js"), code);
+	fs.writeFileSync(path.join(__dirname, exportPath, "js/bees.js"), code);
 	const minified = uglify.minify(code);
-	fs.writeFileSync(path.join(__dirname, exportPath, "bees.min.js"), comment + minified.code);
+	fs.writeFileSync(path.join(__dirname, exportPath, "js/bees.min.js"), comment + minified.code);
 }
 function GenerateCSSFile() {
 	const raw = file("parts/styles.css");
-	const originalPath = path.join(__dirname, exportPath, "styles.css");
+	const originalPath = path.join(__dirname, exportPath, "css/styles.css");
 	fs.writeFileSync(originalPath, raw);
-	minify(originalPath).then(minified => fs.writeFileSync(path.join(__dirname, exportPath, "styles.min.css"), minified));
+	minify(originalPath).then(minified => fs.writeFileSync(path.join(__dirname, exportPath, "css/styles.min.css"), minified));
 }
 
 

@@ -14,19 +14,19 @@
 
 @font-face {
 	font-family: 'Nevis';
-	src: url('common/fonts/nevis2.ttf') format('woff2');
+	src: url('/common/fonts/nevis2.ttf') format('woff2');
 }
 
 @font-face {
 	font-family: 'Roboto';
-	src: url('common/fonts/roboto/Roboto-Regular.ttf') format('woff2');
+	src: url('/common/fonts/roboto/Roboto-Regular.ttf') format('woff2');
 }
 
 body {
 	margin: 0px;
 	margin-top: 80px;
 	background: var(--main-theme-color-a);
-	background-image: url(img/background.jpg);
+	background-image: url('/img/background.jpg');
 	background-attachment: fixed;
 	overflow-x: hidden;
 }
@@ -52,7 +52,7 @@ body {
 }
 
 header {
-	background-image: url(img/beeheader.png);
+	background-image: url('/img/beeheader.png');
 	background-color: var(--main-theme-color-a);
 	height: 80px;
 	position: fixed;
@@ -121,7 +121,7 @@ header img {
 }
 
 footer {
-	background-image: url(img/beeheader.png);
+	background-image: url('/img/beeheader.png');
 	background-color: var(--main-theme-color-a);
 	font-family: 'Roboto';
 	padding: 4px 8px;

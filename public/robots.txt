@@ -7,6 +7,21 @@ Disallow: /
 User-agent: SemrushBot
 Disallow: /
 
+User-Agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
 User-agent: *
 Disallow: /webService/
 Disallow: /cgi-bin/

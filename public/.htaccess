@@ -27,6 +27,10 @@ ErrorDocument 404 /404.html
 
 RewriteEngine On
 
+# API8
+RewriteRule ^API8/([^/]*)/([^/]*)/([^/]*)/(.*)$ /API/API8.php?module=$1&controller=$2&route=$3&param=$4 [L]
+RewriteRule ^API8/([^/]*)/([^/]*)/(.*)$ /API/API8.php?module=$1&controller=$2&route=$3 [L]
+RewriteRule ^API8($|/) - [L,QSA]
 # API
 RewriteRule ^API/([^/]*)/([^/]*)/(.*)$ /API/API.php?controller=$1&method=$2&param=$3 [L]
 RewriteRule ^API($|/) - [L,QSA]
@@ -37,8 +41,11 @@ RewriteRule ^ws/([^/]*)/(.*)$ /webService/webService.php?function=$1&$2 [L]
 RewriteRule ^Blockara/([^/]*)\.html$ /Blockara/pageLoader.php?path=$1 [L]
 RewriteRule ^Blockara($|/) - [L]
 RewriteRule ^games($|/) - [L]
+RewriteRule ^newtest($|/) - [L]
+RewriteRule ^.well-known($|/) - [L]
 
 # Main Site
+RewriteRule ^sonic\.html$ /sonic [L]
 RewriteRule ^index\.html$ - [L]
 ## Vue routes won't include periods, so let files through for real 404 errors instead of vue routed 404s
 RewriteRule \. - [L]
