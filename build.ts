@@ -8,7 +8,7 @@ import ts from 'typescript';
 import 'dotenv/config';
 
 const file = (filename: string): string => fs.readFileSync(path.join(__dirname, filename), { encoding: "utf8" });
-const exportPath = process.env.BUILD_OUTPUT_PATH || "/out";
+const exportPath = process.env.BUILD_OUTPUT_PATH || "/build";
 const comment = `/**
  * @source: /bees.js
  *
